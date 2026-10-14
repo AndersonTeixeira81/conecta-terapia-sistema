@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão — Conecta Terapia Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="faixa-esqueleto">Esqueleto — dados fictícios, sem banco de dados</div>
+
+  <!-- ============ TELA DE LOGIN (fake, só visual) ============ -->
+  <section class="tela-login" id="tela-login">
+    <div class="cartao-login">
+      <span class="marca-selo" style="margin: 0 auto 18px;">C</span>
+      <h2>Gestão Conecta Terapia</h2>
+      <p class="dica">Área restrita. No esqueleto, qualquer senha funciona.</p>
+      <form id="form-login">
+        <div class="campo" style="text-align: left; margin-bottom: 18px;">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite qualquer senha" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-oliva" style="width: 100%;">Entrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PAINEL ============ -->
+  <div class="painel" id="painel">
+    <div class="painel-topo">
+      <div class="container">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span class="marca-selo">C</span>
+          <h1>Gestão Conecta Terapia Online</h1>
+        </div>
+        <button class="btn btn-contorno btn-pequeno" id="btn-sair" style="color: var(--creme); border-color: var(--creme);">Sair</button>
+      </div>
+    </div>
+
+    <nav class="abas">
+      <div class="container">
+        <button class="aba-btn ativa" data-aba="visao">Visão geral</button>
+        <button class="aba-btn" data-aba="terapeutas">Terapeutas</button>
+        <button class="aba-btn" data-aba="pacientes">Pacientes</button>
+        <button class="aba-btn" data-aba="distribuicao">Distribuição</button>
+        <button class="aba-btn" data-aba="financeiro">Financeiro</button>
+        <button class="aba-btn" data-aba="config">Config</button>
+      </div>
+    </nav>
+
+    <main class="container">
+
+      <!-- VISÃO GERAL -->
+      <section class="aba-painel ativa" id="aba-visao">
+        <h2>Visão geral</h2>
+        <div class="resumo-cards">
+          <div class="resumo-card">
+            <div class="rotulo">Terapeutas ativos</div>
+            <div class="numero" id="card-terapeutas">0</div>
+          </div>
+          <div class="resumo-card">
+            <div class="rotulo">Pacientes cadastrados</div>
+            <div class="numero" id="card-pacientes">0</div>
+          </div>
+          <div class="resumo-card destaque">
+            <div class="rotulo">Encaminhamentos</div>
+            <div class="numero" id="card-encaminhamentos">0</div>
+          </div>
+          <div class="resumo-card alerta">
+            <div class="rotulo">Repasses pendentes</div>
+            <div class="numero" id="card-pendentes">R$ 0</div>
+          </div>
+          <div class="resumo-card">
+            <div class="rotulo">Repasses recebidos</div>
+            <div class="numero" id="card-recebidos">R$ 0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TERAPEUTAS -->
+      <section class="aba-painel" id="aba-terapeutas">
+        <h2>Terapeutas parceiros</h2>
+        <div class="tabela-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th><th>CRP</th><th>WhatsApp</th><th>Especialidades</th><th>Status</th><th>Pacientes</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-terapeutas"></tbody>
+          </table>
+        </div>
+
+        <form class="formulario" id="form-terapeuta">
+          <h3>Adicionar terapeuta</h3>
+          <div class="form-linha">
+            <div class="campo"><label for="t-nome">Nome</label><input id="t-nome" required></div>
+            <div class="campo"><label for="t-crp">CRP</label><input id="t-crp" placeholder="06/000000" required></div>
+            <div class="campo"><label for="t-whats">WhatsApp</label><input id="t-whats" placeholder="(11) 90000-0000" required></div>
+          </div>
+          <div class="form-linha">
+            <div class="campo"><label for="t-esp">Especialidades</label><input id="t-esp" placeholder="Ansiedade, Autoestima"></div>
+            <div class="campo">
+              <label for="t-status">Status</label>
+              <select id="t-status"><option value="ativo">Ativo</option><option value="inativo">Inativo</option></select>
+            </div>
+          </div>
+          <div class="form-acoes"><button type="submit" class="btn btn-oliva btn-pequeno">Adicionar terapeuta</button></div>
+        </form>
+      </section>
+
+      <!-- PACIENTES -->
+      <section class="aba-painel" id="aba-pacientes">
+        <h2>Pacientes</h2>
+        <div class="tabela-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th><th>WhatsApp</th><th>Entrada</th><th>Status</th><th>Terapeuta</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-pacientes"></tbody>
+          </table>
+        </div>
+
+        <form class="formulario" id="form-paciente">
+          <h3>Registrar paciente</h3>
+          <div class="form-linha">
+            <div class="campo"><label for="p-nome">Nome</label><input id="p-nome" required></div>
+            <div class="campo"><label for="p-whats">WhatsApp</label><input id="p-whats" placeholder="(11) 90000-0000" required></div>
+            <div class="campo"><label for="p-data">Data de entrada</label><input id="p-data" type="date" required></div>
+          </div>
+          <div class="form-acoes"><button type="submit" class="btn btn-oliva btn-pequeno">Registrar paciente</button></div>
+        </form>
+      </section>
+
+      <!-- DISTRIBUIÇÃO -->
+      <section class="aba-painel" id="aba-distribuicao">
+        <h2>Distribuir paciente</h2>
+        <div class="distribuicao-box">
+          <div class="form-linha">
+            <div class="campo">
+              <label for="d-paciente">Paciente</label>
+              <select id="d-paciente"></select>
+            </div>
+            <div class="campo">
+              <label for="d-terapeuta">Terapeuta</label>
+              <select id="d-terapeuta"></select>
+            </div>
+          </div>
+          <div class="form-acoes">
+            <button class="btn btn-primario btn-pequeno" id="btn-distribuir">Distribuir</button>
+          </div>
+          <p class="sugestao" id="sugestao-terapeuta"></p>
+        </div>
+
+        <h2 style="margin-top: 8px;">Encaminhamentos</h2>
+        <div class="tabela-wrap">
+          <table>
+            <thead>
+              <tr><th>Paciente</th><th>Terapeuta</th><th>Data</th></tr>
+            </thead>
+            <tbody id="tabela-encaminhamentos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- FINANCEIRO -->
+      <section class="aba-painel" id="aba-financeiro">
+        <h2>Repasses — 1ª sessão por paciente</h2>
+        <p class="secao-sub" style="text-align: left; margin: 0 0 24px;">Cada encaminhamento gera um repasse do terapeuta para a Conecta Terapia Online.</p>
+        <div class="tabela-wrap">
+          <table>
+            <thead>
+              <tr><th>Paciente</th><th>Terapeuta</th><th>Valor</th><th>Status</th><th>Ação</th></tr>
+            </thead>
+            <tbody id="tabela-repasses"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CONFIG -->
+      <section class="aba-painel" id="aba-config">
+        <h2>Configurações</h2>
+        <div class="config-box">
+          <div class="form-linha">
+            <div class="campo">
+              <label for="cfg-whatsapp">WhatsApp oficial (com DDI)</label>
+              <input id="cfg-whatsapp" placeholder="5511999998888">
+            </div>
+            <div class="campo">
+              <label for="cfg-repasse">Valor do repasse padrão (R$)</label>
+              <input id="cfg-repasse" type="number" min="0" step="0.01" value="30">
+            </div>
+          </div>
+          <div class="form-acoes">
+            <button class="btn btn-oliva btn-pequeno" id="btn-salvar-config">Salvar</button>
+          </div>
+          <p class="aviso">No esqueleto, as configurações ficam só nesta sessão do navegador.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
