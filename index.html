@@ -7,15 +7,21 @@
   <meta name="description" content="Terapia online acessível. Sessões de 30 minutos por R$30, com terapeutas parceiros. Cuidado de verdade.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="cabecalho">
+  <header class="cabecalho cabecalho-v3">
     <div class="container">
-      <a class="marca" href="#">
-        <span class="marca-selo">C</span>
+      <a class="marca" href="#" aria-label="Conecta Terapia Online">
+        <svg class="selo-svg" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="57" fill="none" stroke="#8B8A67" stroke-width="5"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#C68A63" stroke-width="2"/>
+          <circle cx="60" cy="42" r="11" fill="#8B8A67"/>
+          <path d="M60 58 C 44 66, 42 84, 60 96 C 78 84, 76 66, 60 58 Z" fill="#8B8A67"/>
+          <path d="M60 62 C 52 68, 51 80, 60 90 C 69 80, 68 68, 60 62 Z" fill="#F5EDE3"/>
+        </svg>
         <span class="marca-nome">Conecta Terapia <span>Online</span></span>
       </a>
       <nav class="nav-links">
@@ -28,48 +34,72 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero-novo">
-      <div class="container">
-        <div class="hero-conteudo">
-          <span class="hero-selo">Terapia online · R$30 · 30 min</span>
-          <h1>Cuidar da mente não deveria ser <em>privilégio.</em></h1>
-          <p class="hero-apoio">Sessões online de 30 minutos por R$30, com terapeutas parceiros. Sem burocracia, sem vergonha, sem desculpa para adiar.</p>
+    <!-- HERO EDITORIAL -->
+    <section class="hero-v3">
+      <div class="container hero-v3-grid">
+        <div class="hero-v3-texto revelar">
+          <span class="hero-selo">Terapia online acessível</span>
+          <h1>Cuidar da mente <span class="script">não deveria</span> ser privilégio.</h1>
+          <p class="hero-apoio">Sessões online de 30 minutos por <strong>R$30</strong>, com terapeutas parceiros. Sem burocracia, sem vergonha, sem desculpa para adiar.</p>
           <div class="hero-acoes">
             <a class="btn btn-primario btn-grande" href="#" data-whatsapp>Quero começar agora</a>
-            <span class="hero-micro">Resposta rápida no WhatsApp</span>
+            <a class="hero-link" href="#como-funciona">ver como funciona</a>
           </div>
-          <div class="hero-confianca">
-            <span>100% online</span>
-            <span>R$30 fixos</span>
-            <span>Sigiloso</span>
+          <div class="hero-mini">
+            <div class="hero-avatars">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=70" alt="" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=70" alt="" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=70" alt="" loading="lazy">
+            </div>
+            <p>Para quem sempre quis fazer terapia<br>e esbarrou no preço.</p>
+          </div>
+        </div>
+        <div class="hero-v3-imagem revelar">
+          <div class="arco-fundo"></div>
+          <img class="foto-arco" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Mulher meditando ao nascer do sol">
+          <div class="cartao-flutuante cf1">
+            <strong>R$30</strong>
+            <span>por sessão</span>
+          </div>
+          <div class="cartao-flutuante cf2">
+            <strong>100%</strong>
+            <span>online e sigiloso</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FAIXA ANIMADA -->
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa-trilho">
+        <span>acolhimento</span><i>·</i><span>escuta sem julgamento</span><i>·</i><span>autocuidado</span><i>·</i><span>30 minutos</span><i>·</i><span>R$30</span><i>·</i><span>terapia possível</span><i>·</i>
+        <span>acolhimento</span><i>·</i><span>escuta sem julgamento</span><i>·</i><span>autocuidado</span><i>·</i><span>30 minutos</span><i>·</i><span>R$30</span><i>·</i><span>terapia possível</span><i>·</i>
+      </div>
+    </div>
+
     <!-- PARA QUEM É -->
     <section class="secao" id="para-quem">
       <div class="container">
-        <h2 class="secao-titulo">Feita para o seu momento</h2>
-        <p class="secao-sub">Você não precisa estar no limite para pedir ajuda. Basta querer se cuidar.</p>
+        <p class="sobretitulo revelar">Para quem é</p>
+        <h2 class="secao-titulo revelar">Feita para o <span class="script">seu</span> momento</h2>
+        <p class="secao-sub revelar">Você não precisa estar no limite para pedir ajuda. Basta querer se cuidar.</p>
         <div class="dor-cards">
-          <article class="dor-card">
+          <article class="dor-card dor-arco revelar">
             <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Mulher praticando yoga ao pôr do sol" loading="lazy">
             <div class="dor-card-texto">
               <h3>Ansiedade e estresse</h3>
               <p>A cabeça não desliga, o peito aperta. Terapia ajuda a organizar o que está bagunçado por dentro.</p>
             </div>
           </article>
-          <article class="dor-card">
+          <article class="dor-card dor-arco revelar">
             <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80" alt="Pessoa de braços abertos diante do nascer do sol" loading="lazy">
             <div class="dor-card-texto">
               <h3>Recomeços</h3>
-              <p>Término, luto, mudança de cidade, fase nova. Recomeçar fica mais leve com alguém do seu lado.</p>
+              <p>Término, luto, mudança de fase. Recomeçar fica mais leve com alguém do seu lado.</p>
             </div>
           </article>
-          <article class="dor-card">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="Mulher meditando ao nascer do sol" loading="lazy">
+          <article class="dor-card dor-arco revelar">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Cena de autocuidado com vela, toalha e flores" loading="lazy">
             <div class="dor-card-texto">
               <h3>Autocuidado de verdade</h3>
               <p>Você cuida de todo mundo. Chegou a hora de ter um espaço que é só seu.</p>
@@ -79,41 +109,51 @@
       </div>
     </section>
 
+    <!-- FAIXA DE NÚMEROS -->
+    <section class="faixa-numeros">
+      <div class="container numeros-grid">
+        <div class="numero revelar"><strong><span class="contar" data-alvo="30">0</span> min</strong><span>sessões objetivas</span></div>
+        <div class="numero revelar"><strong>R$<span class="contar" data-alvo="30">0</span></strong><span>valor único e fixo</span></div>
+        <div class="numero revelar"><strong><span class="contar" data-alvo="100">0</span>%</strong><span>online, de onde você estiver</span></div>
+      </div>
+    </section>
+
     <!-- COMO FUNCIONA -->
     <section class="secao secao-alternada" id="como-funciona">
       <div class="container">
-        <h2 class="secao-titulo">Do primeiro "oi" à sua sessão</h2>
-        <p class="secao-sub">Três passos. Menos de um minuto para começar.</p>
+        <p class="sobretitulo revelar">Como funciona</p>
+        <h2 class="secao-titulo revelar">Do primeiro "oi" à sua sessão</h2>
+        <p class="secao-sub revelar">Três passos. Menos de um minuto para começar.</p>
         <div class="passos">
-          <div class="passo">
+          <div class="passo revelar">
             <div class="passo-numero">1</div>
             <h3>Você chama no WhatsApp</h3>
             <p>Sem cadastro complicado, sem formulário infinito. Uma conversa simples para entender o que você precisa.</p>
           </div>
-          <div class="passo">
+          <div class="passo revelar">
             <div class="passo-numero">2</div>
             <h3>Conectamos você a um terapeuta parceiro</h3>
             <p>Profissionais qualificados da nossa rede, escolhidos para o seu momento.</p>
           </div>
-          <div class="passo">
+          <div class="passo revelar">
             <div class="passo-numero">3</div>
             <h3>Sessão online de 30 min</h3>
             <p>Por videochamada, de onde você estiver. No seu ritmo, com total privacidade.</p>
           </div>
         </div>
-        <div style="text-align:center; margin-top: 40px;">
-          <a class="btn btn-primario" href="#" data-whatsapp>Dar o primeiro passo</a>
+        <div style="text-align:center; margin-top: 44px;" class="revelar">
+          <a class="btn btn-primario btn-grande" href="#" data-whatsapp>Dar o primeiro passo</a>
         </div>
       </div>
     </section>
 
     <!-- PREÇO -->
-    <section class="secao preco-secao">
+    <section class="secao">
       <div class="container">
-        <div class="preco-card">
+        <div class="preco-card revelar">
           <span class="preco-selo">Valor único · Sem surpresa</span>
           <div class="preco-valor">R$30</div>
-          <p class="preco-desc">por sessão de 30 minutos, online.<br>Menos que uma pizza. Mais que um desabafo.</p>
+          <p class="preco-desc">por sessão de 30 minutos, online.<br><em>Menos que uma pizza. Mais que um desabafo.</em></p>
           <a class="btn btn-primario btn-grande" href="#" data-whatsapp>Agendar minha sessão</a>
         </div>
       </div>
@@ -122,15 +162,15 @@
     <!-- DEPOIMENTOS -->
     <section class="secao secao-alternada">
       <div class="container">
-        <h2 class="secao-titulo">Quem já deu o primeiro passo</h2>
-        <p class="secao-sub">Histórias de quem decidiu se cuidar.</p>
+        <p class="sobretitulo revelar">Histórias</p>
+        <h2 class="secao-titulo revelar">Quem já deu o <span class="script">primeiro passo</span></h2>
         <div class="depo-cards">
-          <article class="depo-card">
+          <article class="depo-card revelar">
             <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="Retrato de mulher sorrindo" loading="lazy">
             <blockquote>"Eu achava que terapia era coisa de gente rica. Em 30 minutos entendi que era coisa de gente corajosa."</blockquote>
             <cite>Mariana, 29</cite>
           </article>
-          <article class="depo-card">
+          <article class="depo-card revelar">
             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Retrato de jovem sorrindo" loading="lazy">
             <blockquote>"Fiz a primeira sessão no intervalo do trabalho, pelo celular. Nunca tinha falado sobre mim assim."</blockquote>
             <cite>Camila, 34</cite>
@@ -143,25 +183,26 @@
     <!-- FAQ -->
     <section class="secao" id="faq">
       <div class="container container-estreito">
-        <h2 class="secao-titulo">Dúvidas frequentes</h2>
+        <p class="sobretitulo revelar" style="text-align:center;">Dúvidas</p>
+        <h2 class="secao-titulo revelar">Perguntas frequentes</h2>
         <div class="faq-lista">
-          <details class="faq-item" open>
+          <details class="faq-item revelar" open>
             <summary>Como funciona a sessão online?</summary>
             <p>Por videochamada, em dia e horário combinados com seu terapeuta parceiro. Você só precisa de um celular e um lugar tranquilo.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item revelar">
             <summary>É sigiloso?</summary>
             <p>Totalmente. Tudo o que você compartilha na sessão é protegido pelo sigilo profissional do terapeuta.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item revelar">
             <summary>Preciso me cadastrar em algum lugar?</summary>
             <p>Não. O primeiro contato é direto pelo WhatsApp — sem formulários, sem burocracia.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item revelar">
             <summary>Quem são os terapeutas?</summary>
             <p>Profissionais parceiros qualificados da nossa rede, selecionados pela Conecta Terapia Online.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item revelar">
             <summary>E se eu não gostar da primeira sessão?</summary>
             <p>Sem problema e sem compromisso. Você pode pedir para trocar de terapeuta parceiro ou simplesmente não continuar.</p>
           </details>
@@ -171,7 +212,8 @@
 
     <!-- CTA FINAL -->
     <section class="cta-final">
-      <div class="container">
+      <div class="container revelar">
+        <p class="sobretitulo" style="color: var(--bege);">Comece hoje</p>
         <h2>O primeiro passo leva <em>menos de um minuto.</em></h2>
         <p>Chama no WhatsApp, conta o que você precisa e a gente conecta você a um terapeuta parceiro.</p>
         <a class="btn btn-primario btn-grande" href="#" data-whatsapp>Começar pelo WhatsApp</a>
@@ -181,6 +223,13 @@
 
   <footer class="rodape">
     <div class="container">
+      <svg class="selo-svg selo-rodape" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#DCC7AD" stroke-width="5"/>
+        <circle cx="60" cy="60" r="48" fill="none" stroke="#C68A63" stroke-width="2"/>
+        <circle cx="60" cy="42" r="11" fill="#DCC7AD"/>
+        <path d="M60 58 C 44 66, 42 84, 60 96 C 78 84, 76 66, 60 58 Z" fill="#DCC7AD"/>
+        <path d="M60 62 C 52 68, 51 80, 60 90 C 69 80, 68 68, 60 62 Z" fill="#5C6650"/>
+      </svg>
       <div class="assinatura">@conectaterapiaonline</div>
       <p>Conecta Terapia Online — Terapia online acessível. Cuidado de verdade.</p>
     </div>
