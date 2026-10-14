@@ -434,12 +434,229 @@ tbody tr:hover { background: rgba(139, 138, 103, .07); }
 
 .aviso { font-size: .85rem; color: var(--texto-suave); margin-top: 12px; }
 
+/* ---------- Site público v2 — moderno e focado em conversão ---------- */
+
+.btn-grande { padding: 17px 40px; font-size: 1.1rem; }
+
+.container-estreito { max-width: 760px; }
+
+/* Hero com imagem */
+.hero-novo {
+  position: relative;
+  color: var(--creme);
+  padding: 120px 0 110px;
+  background:
+    linear-gradient(100deg, rgba(52, 56, 46, .88) 0%, rgba(52, 56, 46, .62) 45%, rgba(52, 56, 46, .25) 100%),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+
+.hero-novo .hero-conteudo { max-width: 620px; }
+
+.hero-novo .hero-selo {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--bege);
+  border: 1px solid rgba(220, 199, 173, .5);
+  border-radius: 999px;
+  padding: 8px 18px;
+  margin-bottom: 24px;
+}
+
+.hero-novo h1 {
+  color: var(--creme);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.hero-novo h1 em { color: var(--bege); font-style: italic; }
+
+.hero-novo .hero-apoio {
+  font-size: 1.2rem;
+  color: rgba(245, 237, 227, .85);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.hero-acoes { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-micro { font-size: .9rem; color: rgba(245, 237, 227, .7); }
+
+.hero-confianca { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-confianca span {
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--creme);
+  background: rgba(245, 237, 227, .14);
+  border: 1px solid rgba(245, 237, 227, .25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Cards "para quem é" */
+.dor-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.dor-card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform .2s ease;
+}
+
+.dor-card:hover { transform: translateY(-4px); }
+
+.dor-card img { width: 100%; height: 220px; object-fit: cover; }
+
+.dor-card-texto { padding: 28px 26px 32px; }
+.dor-card-texto h3 { font-size: 1.25rem; margin-bottom: 10px; }
+.dor-card-texto p { color: var(--texto-suave); font-size: .95rem; }
+
+/* Preço em destaque */
+.preco-secao { background: var(--escuro); }
+
+.preco-card {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--creme);
+  border-radius: 20px;
+  padding: 56px 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .25);
+}
+
+.preco-selo {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--terracota);
+  margin-bottom: 16px;
+}
+
+.preco-valor {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(4rem, 10vw, 6rem);
+  font-weight: 600;
+  color: var(--escuro);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.preco-desc { color: var(--texto-suave); font-size: 1.05rem; margin-bottom: 32px; }
+
+/* Depoimentos */
+.depo-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 860px; margin: 0 auto; }
+
+.depo-card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 36px 32px;
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.depo-card img {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 3px solid var(--bege);
+}
+
+.depo-card blockquote {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--escuro);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.depo-card cite { font-style: normal; font-weight: 600; color: var(--texto-suave); font-size: .9rem; }
+
+.nota-ilustrativa { text-align: center; color: var(--texto-suave); font-size: .8rem; margin-top: 20px; }
+
+/* FAQ */
+.faq-lista { display: flex; flex-direction: column; gap: 12px; }
+
+.faq-item {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-weight: 600;
+  color: var(--escuro);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--terracota);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { content: '–'; }
+
+.faq-item p { padding: 0 24px 22px; color: var(--texto-suave); }
+
+/* CTA final */
+.cta-final {
+  background:
+    linear-gradient(180deg, rgba(139, 138, 103, .94), rgba(92, 102, 80, .96)),
+    url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  color: var(--creme);
+  text-align: center;
+  padding: 96px 0;
+}
+
+.cta-final h2 { color: var(--creme); font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 16px; }
+.cta-final h2 em { color: var(--bege); font-style: italic; }
+.cta-final p { color: rgba(245, 237, 227, .85); font-size: 1.15rem; max-width: 560px; margin: 0 auto 36px; }
+
+/* Barra fixa mobile */
+.barra-cta-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(245, 237, 227, .96);
+  border-top: 1px solid var(--borda);
+  z-index: 90;
+  backdrop-filter: blur(8px);
+}
+
+.barra-cta-mobile .btn { width: 100%; }
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 860px) {
   .passos, .modelo-cards { grid-template-columns: 1fr; }
   .nav-links a:not(.btn) { display: none; }
   .hero { padding: 64px 0 60px; }
   .secao { padding: 52px 0; }
+  .dor-cards { grid-template-columns: 1fr; }
+  .depo-cards { grid-template-columns: 1fr; }
+  .hero-novo { padding: 88px 0 80px; }
+  .cta-final { padding: 72px 0; }
+  .barra-cta-mobile { display: block; }
+  body { padding-bottom: 76px; }
 }
 
 @media (max-width: 560px) {
