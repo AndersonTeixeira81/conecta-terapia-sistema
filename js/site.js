@@ -3,7 +3,7 @@
    Configure aqui o WhatsApp oficial e a mensagem padrão.
    ============================================================ */
 
-var WHATSAPP_NUMERO = ""; // ex.: "5518999999999" (só números, com DDI+DDD)
+var WHATSAPP_NUMERO = "5518991879264"; // número oficial Conecta Terapia Online
 var WHATSAPP_MSG = "Olá! Quero começar minha terapia online.";
 
 (function () {

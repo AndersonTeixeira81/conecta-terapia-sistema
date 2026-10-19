@@ -7,7 +7,7 @@
 
 /* ---------- Configurações (editáveis na aba Config) ---------- */
 const config = {
-  whatsappOficial: '',
+  whatsappOficial: '5518991879264',
   valorRepasse: 30,
 };
 
