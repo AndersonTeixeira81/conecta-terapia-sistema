@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quero terapia a valor social — Conecta Terapia Online</title>
+  <meta name="description" content="Cadastre-se para saber mais sobre a terapia online acessível da Conecta Terapia Online: sessões de 30 minutos por um valor social de R$30, com terapeutas parceiros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho cabecalho-v3">
+    <div class="container">
+      <a class="marca" href="index.html" aria-label="Conecta Terapia Online">
+        <svg class="selo-svg" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="57" fill="none" stroke="#8B8A67" stroke-width="5"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#C68A63" stroke-width="2"/>
+          <circle cx="60" cy="42" r="11" fill="#8B8A67"/>
+          <path d="M60 58 C 44 66, 42 84, 60 96 C 78 84, 76 66, 60 58 Z" fill="#8B8A67"/>
+          <path d="M60 62 C 52 68, 51 80, 60 90 C 69 80, 68 68, 60 62 Z" fill="#F5EDE3"/>
+        </svg>
+        <span class="marca-nome">Conecta Terapia <span>Online</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#para-quem">Para quem é</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="index.html#faq">Dúvidas</a>
+        <a class="btn btn-contorno btn-pequeno" href="index.html">Voltar ao site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="captacao-wrap">
+      <div class="container container-estreito">
+        <div class="captacao-hero revelar visivel">
+          <span class="hero-selo">Cadastro de interesse</span>
+          <h1>Terapia online <span class="script">acessível</span></h1>
+          <p class="hero-apoio">Sessões online de 30 minutos com terapeutas parceiros por um valor social de <strong>R$30</strong>. Deixe seu nome e seu WhatsApp: a gente te chama para explicar como funciona, sem compromisso.</p>
+          <p class="captacao-frase">“Porque pedir ajuda não deveria depender da condição financeira.”</p>
+        </div>
+
+        <form class="formulario form-captacao" id="form-captacao" novalidate>
+          <h3>Quero saber mais</h3>
+
+          <div class="form-linha">
+            <div class="campo">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar?" required>
+              <p class="erro" id="erro-nome">Conta pra gente o seu nome.</p>
+            </div>
+            <div class="campo">
+              <label for="whatsapp">WhatsApp com DDD *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(18) 99999-9999" required>
+              <p class="erro" id="erro-whatsapp">Digite um WhatsApp válido com DDD (10 ou 11 dígitos).</p>
+            </div>
+          </div>
+
+          <div class="form-linha">
+            <div class="campo">
+              <label for="turno">Melhor turno para a gente te chamar</label>
+              <select id="turno" name="turno">
+                <option value="" selected>Sem preferência</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="tema">O que você busca? (opcional)</label>
+              <select id="tema" name="tema">
+                <option value="" selected>Prefiro contar na conversa</option>
+                <option value="Ansiedade">Ansiedade</option>
+                <option value="Relacionamento">Relacionamento</option>
+                <option value="Autoestima">Autoestima</option>
+                <option value="Luto">Luto</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo-checkbox">
+            <input type="checkbox" id="autorizacao" name="autorizacao">
+            <label for="autorizacao">Autorizo a Conecta Terapia Online a entrar em contato comigo pelo WhatsApp e me enviar informações sobre terapia a valor social. Sei que posso cancelar quando quiser, respondendo SAIR.</label>
+          </div>
+
+          <div class="form-acoes">
+            <button type="submit" class="btn btn-primario btn-grande" id="btn-enviar" disabled>Quero receber o contato no WhatsApp</button>
+          </div>
+
+          <p class="privacidade">Privacidade (LGPD): seus dados serão usados apenas para entrarmos em contato sobre o programa de terapia a valor social da Conecta Terapia Online. Não compartilhamos suas informações com terceiros para outros fins.</p>
+
+          <div class="confirmacao" id="confirmacao" role="status">
+            <strong>Quase lá! 💚</strong>
+            <p>Abrimos o WhatsApp com a sua mensagem prontinha. É só tocar em <strong>enviar</strong> por lá para concluir o cadastro — assim sua autorização fica registrada na nossa conversa. Se o WhatsApp não abrir, <a href="#" id="link-whatsapp-direto" target="_blank" rel="noopener">toque aqui para abrir</a>.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <svg class="selo-svg selo-rodape" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#DCC7AD" stroke-width="5"/>
+        <circle cx="60" cy="60" r="48" fill="none" stroke="#C68A63" stroke-width="2"/>
+        <circle cx="60" cy="42" r="11" fill="#DCC7AD"/>
+        <path d="M60 58 C 44 66, 42 84, 60 96 C 78 84, 76 66, 60 58 Z" fill="#DCC7AD"/>
+        <path d="M60 62 C 52 68, 51 80, 60 90 C 69 80, 68 68, 60 62 Z" fill="#5C6650"/>
+      </svg>
+      <div class="assinatura">@conectaterapiaonline</div>
+      <p>Conecta Terapia Online — Terapia online acessível. Cuidado de verdade.</p>
+      <p class="whatsapp-rodape">WhatsApp: <a href="https://wa.me/5518991879264" target="_blank" rel="noopener">(18) 99187-9264</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var WHATSAPP_NUMERO = "5518991879264";
+
+      var form = document.getElementById("form-captacao");
+      var nome = document.getElementById("nome");
+      var whatsapp = document.getElementById("whatsapp");
+      var turno = document.getElementById("turno");
+      var tema = document.getElementById("tema");
+      var autorizacao = document.getElementById("autorizacao");
+      var botao = document.getElementById("btn-enviar");
+      var confirmacao = document.getElementById("confirmacao");
+      var linkDireto = document.getElementById("link-whatsapp-direto");
+      var erroNome = document.getElementById("erro-nome");
+      var erroWhatsapp = document.getElementById("erro-whatsapp");
+
+      function digitos(valor) {
+        return (valor || "").replace(/\D/g, "");
+      }
+
+      function telefoneValido() {
+        var d = digitos(whatsapp.value);
+        if ((d.length === 12 || d.length === 13) && d.indexOf("55") === 0) {
+          d = d.slice(2);
+        }
+        return d.length === 10 || d.length === 11;
+      }
+
+      function atualizarBotao() {
+        var ok = autorizacao.checked && nome.value.trim().length > 0 && telefoneValido();
+        botao.disabled = !ok;
+      }
+
+      [nome, whatsapp, turno, tema].forEach(function (campo) {
+        campo.addEventListener("input", atualizarBotao);
+        campo.addEventListener("change", atualizarBotao);
+      });
+      autorizacao.addEventListener("change", atualizarBotao);
+
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+
+        var nomeOk = nome.value.trim().length > 0;
+        var foneOk = telefoneValido();
+        erroNome.classList.toggle("visivel", !nomeOk);
+        erroWhatsapp.classList.toggle("visivel", !foneOk);
+        if (!nomeOk || !foneOk || !autorizacao.checked) {
+          atualizarBotao();
+          return;
+        }
+
+        var linhas = [
+          "Olá! Meu nome é " + nome.value.trim() + ".",
+          "Tenho interesse na terapia a valor social da Conecta Terapia Online."
+        ];
+        linhas.push("Melhor turno: " + (turno.value || "sem preferência") + ".");
+        if (tema.value) {
+          linhas.push("O que eu busco: " + tema.value + ".");
+        }
+        linhas.push("Autorizo a Conecta Terapia Online a me enviar mensagens no WhatsApp sobre terapia a valor social. — Cadastro feito na página da Conecta");
+
+        var url = "https://wa.me/" + WHATSAPP_NUMERO + "?text=" + encodeURIComponent(linhas.join("\n"));
+        linkDireto.setAttribute("href", url);
+        window.open(url, "_blank");
+        confirmacao.classList.add("visivel");
+        confirmacao.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      atualizarBotao();
+    })();
+  </script>
+</body>
+</html>
