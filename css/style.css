@@ -940,3 +940,83 @@ tbody tr:hover { background: rgba(139, 138, 103, .07); }
 .confirmacao.visivel { display: block; }
 .confirmacao p { margin-top: 6px; }
 .confirmacao a { color: var(--terracota); font-weight: 600; }
+
+/* ---------- Bio (link-in-bio) ---------- */
+.bio-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 24px 40px;
+  background:
+    radial-gradient(ellipse 80% 50% at 85% 0%, rgba(220, 199, 173, .55), transparent),
+    radial-gradient(ellipse 70% 45% at 8% 100%, rgba(139, 138, 103, .18), transparent),
+    var(--creme);
+}
+
+.bio-conteudo { width: 100%; max-width: 480px; text-align: center; }
+
+.bio-selo { width: 112px; height: 112px; margin: 0 auto 20px; }
+
+.bio-nome { font-size: 2rem; font-weight: 500; margin-bottom: 6px; }
+.bio-nome span { color: var(--terracota); font-style: italic; }
+
+.bio-linha { font-size: 1.1rem; font-weight: 600; color: var(--texto); margin-bottom: 14px; }
+
+.bio-frase {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--terracota);
+  max-width: 400px;
+  margin: 0 auto 36px;
+}
+
+.bio-botoes { display: flex; flex-direction: column; gap: 14px; }
+
+.bio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 17px 24px;
+  border-radius: 999px;
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.bio-btn:hover { transform: translateY(-2px); }
+
+.bio-btn-destaque {
+  background: var(--terracota);
+  color: #fff;
+  font-size: 1.12rem;
+  padding: 20px 24px;
+  box-shadow: 0 10px 24px rgba(198, 138, 99, .4);
+}
+
+.bio-btn-destaque:hover { background: #B87A55; }
+
+.bio-btn-whats {
+  background: var(--oliva);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(139, 138, 103, .35);
+}
+
+.bio-btn-whats:hover { background: #7A7A58; }
+
+.bio-btn-social {
+  background: var(--branco);
+  color: var(--escuro);
+  border: 2px solid var(--borda);
+}
+
+.bio-btn-social:hover { border-color: var(--oliva); }
+
+.bio-rodape { margin-top: 44px; }
+.bio-rodape .assinatura { font-weight: 700; letter-spacing: .04em; color: var(--escuro); font-size: .95rem; }
+.bio-rodape p { color: var(--texto-suave); font-size: .82rem; margin-top: 6px; }
